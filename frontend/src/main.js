@@ -3,7 +3,6 @@ import { createPinia } from 'pinia'
 import { createApp } from 'vue'
 import VueGridLayout from 'vue3-drr-grid-layout'
 import 'vue3-drr-grid-layout/dist/style.css'
-import { socketio_port } from '../../../../sites/common_site_config.json'
 import App from './App.vue'
 import './index.css'
 import router from './router'
@@ -35,7 +34,7 @@ app.config.unwrapInjectedRef = true
 app.provide(
 	'$socket',
 	initSocket({
-		port: socketio_port,
+		port: parseInt(import.meta.env.VITE_SOCKETIO_PORT),
 	})
 )
 
