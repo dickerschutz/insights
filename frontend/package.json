@@ -5,8 +5,7 @@
 	"scripts": {
 		"dev": "vite",
 		"serve": "vite preview",
-		"build": "vite build --config vite.config.build.js --base=/assets/insights/frontend/ && yarn copy-html-entry",
-		"copy-html-entry": "cp ../insights/public/frontend/index.html ../insights/www/insights.html"
+		"build": "vite build --config vite.config.build.js --base=/assets/insights/frontend/"
 	},
 	"dependencies": {
 		"@codemirror/lang-javascript": "^6.0.2",
