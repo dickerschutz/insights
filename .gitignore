@@ -60,3 +60,5 @@ pids
 *.seed
 *.pid.lock
 todo
+
+__pycache__
