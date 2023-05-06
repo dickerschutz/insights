@@ -429,7 +429,7 @@ function downloadCSV() {
 	let data = query.results.data
 	if (data.length === 0) return
 	data[0] = data[0].map((d) => d.label)
-	const csvString = data.map((row) => row.join(',')).join('\n')
+	const csvString = data.map((row) => row.map((cell) => `"${cell}"`).join(',')).join('\n')
 	const blob = new Blob([csvString], { type: 'text/csv' })
 	const url = window.URL.createObjectURL(blob)
 	const a = document.createElement('a')
